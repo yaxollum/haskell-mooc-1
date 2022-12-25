@@ -3105,7 +3105,7 @@ this topic connects to equational reasoning discussed in chapter 10.
 <span id="cb255-21"><a href="#cb255-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span> x <span class="ot">=</span> <span class="dt">Logger</span> [] x</span>
 <span id="cb255-22"><a href="#cb255-22" aria-hidden="true" tabindex="-1"></a>  <span class="dt">Logger</span> la a <span class="op">&gt;&gt;=</span> f <span class="ot">=</span> <span class="dt">Logger</span> (la<span class="op">++</span>lb) b</span>
 <span id="cb255-23"><a href="#cb255-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">where</span> <span class="dt">Logger</span> lb b <span class="ot">=</span> f a</span></code></pre></div>
-<p>We don’t need the <code>nomsg</code> operation any more since it’s just <code>return</code>. We can also reimplement the <code>annotate</code> operation using monad operations.</p>
+<p>We don’t need the <code>nomsg</code> operation anymore since it’s just <code>return</code>. We can also reimplement the <code>annotate</code> operation using monad operations.</p>
 <div class="sourceCode" id="cb256"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb256-1"><a href="#cb256-1" aria-hidden="true" tabindex="-1"></a><span class="ot">nomsg ::</span> a <span class="ot">-&gt;</span> <span class="dt">Logger</span> a</span>
 <span id="cb256-2"><a href="#cb256-2" aria-hidden="true" tabindex="-1"></a>nomsg x <span class="ot">=</span> <span class="fu">return</span> x</span>
 <span id="cb256-3"><a href="#cb256-3" aria-hidden="true" tabindex="-1"></a></span>
