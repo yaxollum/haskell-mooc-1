@@ -11,7 +11,7 @@ deposit accountName amount (Bank accounts) =
 
 withdraw :: String -> Int -> Bank -> (Int,Bank)
 withdraw accountName amount (Bank accounts) =
-  let balance = Map.findWithDefault 0 accountName accounts  -- balance is 0 for a nonexistant account
+  let balance = Map.findWithDefault 0 accountName accounts  -- balance is 0 for a nonexistent account
       withdrawal = min amount balance                       -- can't withdraw over balance
       newAccounts = Map.adjust (\x -> x-withdrawal) accountName accounts
   in (withdrawal, Bank newAccounts)
