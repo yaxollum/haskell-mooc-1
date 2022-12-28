@@ -235,8 +235,8 @@ f2 acc x = todo
 -- instance that behaves roughly like the Monad Maybe instance.
 --
 -- That is,
---   1. MkResult behave like Just
---   2. If part of computation produces NoResult, the whole computation
+--   1. MkResult behaves like Just
+--   2. If part of the computation produces NoResult, the whole computation
 --      produces NoResult (just like Nothing)
 --   3. Similarly, if we get a Failure "reason" value, the whole
 --      computation produces Failure "reason"
